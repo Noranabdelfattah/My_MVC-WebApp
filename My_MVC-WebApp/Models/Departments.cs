@@ -13,6 +13,6 @@ namespace My_MVC_WebApp.Models
 
         public string Name { get; set;  }
 
-        public IList<Employees> Employees { get; set; }
+        public List<Employees> Employees { get; set; }
     }
 }
