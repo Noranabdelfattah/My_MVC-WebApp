@@ -8,9 +8,9 @@ using System.Web;
 namespace My_MVC_WebApp.Models
 {
     [Table("tblEmployee")]
-    public class Employees
+    public class Employee
     {
-        [Key]
+    
         public string EmployeeId { set; get; }
         public string Name { set; get; }
         public string Gender { set; get; }

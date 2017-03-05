@@ -10,10 +10,19 @@ namespace My_MVC_WebApp.Controllers
     public class EmployeesController : Controller
     {
 
-        public ActionResult Index( int departementid)
+        public ActionResult Index0()                              // View All 
         {
             EmployeeContext employeecontext = new EmployeeContext();
-            List<Employees> employeesList = employeecontext.Employees.Where(emp=>emp.DepartementId== departementid).ToList();
+            List<Employee> employeesList = employeecontext.Employees.ToList();
+
+            return View(employeesList);
+        }
+
+
+        public ActionResult Index( int departmentId)                     // Employees of a specific Departments
+        {
+            EmployeeContext employeecontext = new EmployeeContext();
+            List<Employee> employeesList = employeecontext.Employees.Where(emp=>emp.DepartementId== departmentId).ToList();
 
             return View(employeesList);
         }
@@ -23,7 +32,7 @@ namespace My_MVC_WebApp.Controllers
 
         { 
            EmployeeContext employeecontext = new EmployeeContext();
-           Employees employee = employeecontext.Employees.Single(emp => emp.EmployeeId == id);
+           Employee employee = employeecontext.Employees.Single(emp => emp.EmployeeId.Equals(id));
 
             return View(employee);
       

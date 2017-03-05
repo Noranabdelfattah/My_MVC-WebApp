@@ -1,4 +1,4 @@
-﻿@model My_MVC_WebApp.Models.Employees
+﻿@model My_MVC_WebApp.Models.Employee
 
 @{
     ViewBag.Title = "Details";
@@ -45,4 +45,4 @@
 
 
 
-@Html.ActionLink("Back To List ","Index")
+<h4>@Html.ActionLink("Back To Employees List ", "Index", new { departmentId = @Model.DepartementId }) </h4>

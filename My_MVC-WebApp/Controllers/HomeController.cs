@@ -11,10 +11,7 @@ namespace My_MVC_WebApp.Controllers
         // GET: Home
         public ViewResult Index()
         {
-            ViewBag.Countries = new List<string>
-            {
-                "Egypt","Italy","France"
-            };
+            
             return View();
         }
     }

@@ -1,0 +1,19 @@
+﻿@model IEnumerable< My_MVC_WebApp.Models.Employee>
+    @using My_MVC_WebApp.Models;
+
+@{
+    ViewBag.Title = "Index0";
+}
+
+<h2>Employees Index </h2>
+
+<ul>
+ 
+        @foreach (Employee emp in @Model)
+        {
+            <li> @Html.ActionLink(emp.Name,"Details",new { @id = emp.EmployeeId }) </li>
+        }
+          
+</ul>
+
+<h4> @Html.ActionLink("Back To HomePage", "Index", "Home")</h4>

@@ -1,19 +1,20 @@
-﻿@using My_MVC_WebApp.Models;
-
+﻿@using My_MVC_WebApp.Models ;
 @model IEnumerable< My_MVC_WebApp.Models.Departments>
 
 @{
-    ViewBag.Title = "Departements List";
+    ViewBag.Title = "Departments Index";
 }
 
-<h2>Departements List</h2>
-<div style="font-family:Arial">
-    <ul>
-        @foreach (Departments dep in @Model)
-        {
-            <li> @Html.ActionLink(dep.Name, "Index", "Employees", new { @departementid = dep.ID },null) </li>
-        }
+<h2>Departments Index</h2>
 
-    </ul>
+<ul>
+    @foreach (Departments dep in @Model) {
 
-</div>
+        <li>@Html.ActionLink(dep.Name,"Index","Employees", new { @departmentId = dep.ID },null)</li>
+
+    }
+</ul>
+
+<br />
+
+<h4> @Html.ActionLink("Back To HomePage","Index","Home")</h4>

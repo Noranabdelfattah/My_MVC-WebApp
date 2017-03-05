@@ -3,10 +3,12 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Countries List </h2>
+<h2>Welcome to HomePage </h2>
 <ul>
-    @foreach(string name in ViewBag.Countries)
-    {
-        <li>@name</li>
-    }
+   
+        <li>@Html.ActionLink("View All Employees ","Index0","Employees")</li>
+    <br /> <br />
+
+    <li>@Html.ActionLink("View All Departments ", "Index", "Departments")</li>
+    
 </ul>
